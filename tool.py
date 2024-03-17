@@ -29,7 +29,7 @@ Lcyan = Fore.LIGHTCYAN_EX
 chromedriver_autoinstaller.install()
 
 def banner():
-    console.print(r"""
+    print(r"""
     ___       _                             
   / _ \  ___| |_ __ _ _ __   __ _ _ __ ___ 
  | | | |/ __| __/ _` | '_ \ / _` | '__/ __|
@@ -361,4 +361,5 @@ async def main():
 
 
 if __name__ == "__main__":
+    banner()
     asyncio.run(main())
