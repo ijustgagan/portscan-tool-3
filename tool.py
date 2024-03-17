@@ -28,6 +28,16 @@ Lcyan = Fore.LIGHTCYAN_EX
 # Call chromedriver_autoinstaller.install() before using Selenium
 chromedriver_autoinstaller.install()
 
+def banner():
+    console.print(r"""
+    ___       _                             
+  / _ \  ___| |_ __ _ _ __   __ _ _ __ ___ 
+ | | | |/ __| __/ _` | '_ \ / _` | '__/ __|
+ | |_| | (__| || (_| | |_) | (_| | |  \__ \
+  \___/ \___|\__\__,_| .__/ \__,_|_|  |___/
+                     |_|                   
+""")
+
 
 async def user_finder(new_u):
     new_url2 = new_u + '/wp-json/wp/v2/users'
