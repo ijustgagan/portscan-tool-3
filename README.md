@@ -19,9 +19,9 @@ This toolkit provides various tools for web security testing, including WordPres
 ## Usage
 1. Open a terminal or command prompt.
 2. Navigate to the directory where the toolkit is located.
-3. Run the `main.py` script:
+3. Run the `tool.py` script:
     ```
-    python main.py
+    python tool.py
     ```
 4. Choose the tool you want to use by entering the corresponding number:
     - 1: WordPress Enumeration
