@@ -7,7 +7,7 @@ This toolkit provides various tools for web security testing, including WordPres
 1. Install Python (if not already installed) from [python.org](https://www.python.org/downloads/).
 2. Install required Python packages using pip:
     ```
-    pip install aiohttp aiofiles requests fake_useragent beautifulsoup4 selenium chromedriver-autoinstaller colorama
+    pip install aiohttp aiofiles requests fake_useragent UserAgent beautifulsoup4 selenium chromedriver-autoinstaller colorama
     ```
 3. Install Chrome WebDriver using chromedriver-autoinstaller:
     ```python
@@ -48,7 +48,3 @@ This toolkit provides various tools for web security testing, including WordPres
 
 ## Contributors
 - [Gagan]
-
----
-
-You can customize the README further based on your preferences and add any additional information or instructions as needed.
