@@ -198,12 +198,13 @@ def run_sql_injection_scan():
             elif details["method"] == "get":
                 res = s.get(url, params=data)
 
-            if vulnerable(res):
+            if 'res' in locals() and vulnerable(res):  # Check if 'res' is defined and not None
                 print("SQL injection attack vulnerability in link:", url)
                 break  # Exit the loop once vulnerability is found
         else:
             print("No SQL injection attack vulnerability detected")
             break  # Exit the loop if no vulnerability found after trying all payloads
+
 
 
 async def run_wordpress_enumeration():
