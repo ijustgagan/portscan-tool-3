@@ -1,2 +1,5 @@
 sudo apt install python3-pip
 pip3 install aiohttp aiofiles requests fake_useragent UserAgent beautifulsoup4 selenium chromedriver-autoinstaller colorama
+
+# requirement to use whois tool or website information gathering tool
+pip install python-whois
