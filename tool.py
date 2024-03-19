@@ -21,6 +21,7 @@ import socket
 import threading
 from random import randint
 
+
 init()
 Dgreen = Fore.LIGHTGREEN_EX
 Lgreen = Fore.LIGHTGREEN_EX
@@ -416,6 +417,26 @@ async def Website_info_whois(url):
     else:
         print("Failed to retrieve website information.")
 
+async def fetch_robots_txt(url):
+    robots_url = urljoin(url, '/robots.txt')
+    async with aiohttp.ClientSession() as session:
+        async with session.get(robots_url) as response:
+            if response.status == 200:
+                return await response.text()
+            else:
+                return None
+
+async def fetch_sitemap(url):
+    sitemap_url = urljoin(url, '/sitemap.xml')
+    async with aiohttp.ClientSession() as session:
+        async with session.get(sitemap_url) as response:
+            if response.status == 200:
+                return await response.text()
+            else:
+                return None
+
+
+
 
 
 async def main():
@@ -425,11 +446,10 @@ async def main():
     print("2. SQL Injection Scanner")
     print("3. Port Scanner")
     print("4. Website Information Whois")
+    print("5. Fetch robots.txt")
+    print("6. Fetch sitemap.xml")
+    choice = input("Enter your choice (1/2/3/4/5/6): ")
 
-    choice = input("Enter your choice (1/2/3/4): ")
-
-    # if choice == "1":
-    #     await run_wordpress_enumeration()
     if choice == "1":
         await xss_search()
     elif choice == "2":
@@ -439,9 +459,24 @@ async def main():
     elif choice == "4":
         url = input("Enter the URL of the website: ")
         await Website_info_whois(url)
+    elif choice == "5":
+        url = input("Enter the URL to fetch robots.txt: ")
+        robots_txt = await fetch_robots_txt(url)
+        if robots_txt:
+            print("Robots.txt content:")
+            print(robots_txt)
+        else:
+            print("Failed to fetch robots.txt")
+    elif choice == "6":
+        url = input("Enter the URL to fetch sitemap.xml: ")
+        sitemap_xml = await fetch_sitemap(url)
+        if sitemap_xml:
+            print("Sitemap.xml content:")
+            print(sitemap_xml)
+        else:
+            print("Failed to fetch sitemap.xml")
     else:
-        print("Invalid choice. Please enter '1', '2', '3', or '4'.")
-
+        print("Invalid choice. Please enter '1', '2', '3', '4', '5', or '6'.")
 
 if __name__ == "__main__":
     banner()
