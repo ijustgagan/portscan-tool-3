@@ -445,9 +445,9 @@ async def main():
     print("1. XSS Search")
     print("2. SQL Injection Scanner")
     print("3. Port Scanner")
-    print("4. Website Information Whois")
-    print("5. Fetch robots.txt")
-    print("6. Fetch sitemap.xml")
+    print("4. Website Reconnaissance")
+    print("5. Fetch robots.txt file")
+    print("6. Fetch sitemap.xml file")
     choice = input("Enter your choice (1/2/3/4/5/6): ")
 
     if choice == "1":
