@@ -442,7 +442,7 @@ async def fetch_sitemap(url):
 async def main():
     print("Choose the tool you want to use:")
     # print("1. WordPress Enumeration")
-    print("1. XSS Search")
+    print("1. XSS Scanner")
     print("2. SQL Injection Scanner")
     print("3. Port Scanner")
     print("4. Website Reconnaissance")
