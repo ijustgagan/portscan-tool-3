@@ -426,7 +426,7 @@ async def fetch_robots_txt(url):
                 return await response.text()
             else:
                 return None
-
+    
 async def fetch_sitemap(url):
     sitemap_url = urljoin(url, '/sitemap.xml')
     async with aiohttp.ClientSession() as session:

@@ -1,31 +1,55 @@
-# OctaparsTOOl
+# OctaparsTool
 
 ## Description
 This toolkit provides various tools for web security testing, including WordPress enumeration, XSS (Cross-Site Scripting) search, SQL injection scanning, and port scanning.
 
-## Installation
-1. Install Python (if not already installed) from [python.org](https://www.python.org/downloads/).
-2. Install required Python packages using pip:
+## Environment Setup
+1. **Install Python and pip:**
+    ```bash
+    sudo apt update
+    sudo apt install python3 python3-pip
     ```
+
+2. **Create a virtual environment:**
+    ```bash
+    python3 -m venv myenv
+    source myenv/bin/activate
+    ```
+
+3. **Clone the OctaparsTOOl repository:**
+    ```bash
+    git clone https://github.com/ijustgagan/Octapars_tool.git
+    cd Octapars_tool
+    ```
+
+4. **Install dependencies:**
+    ```bash
     pip install -r requirements.txt
-
-    ``
-
-3. Clone or download this repository to your local machine.
+    ```
 
 ## Usage
-1. Open a terminal or command prompt.
-2. Navigate to the directory where the toolkit is located.
-3. Run the `tool.py` script:
+1. **Activate the virtual environment:**
+    ```bash
+    source myenv/bin/activate
     ```
-    python tool.py
+
+2. **Navigate to the project directory:**
+    ```bash
+    cd OctaparsTOOl
     ```
-4. Choose the tool you want to use by entering the corresponding number:
+
+3. **Run the `tool.py` script:**
+    ```bash
+    python3 tool.py
+    ```
+
+4. **Choose the tool you want to use by entering the corresponding number:**
     - 1: WordPress Enumeration
     - 2: XSS Search
     - 3: SQL Injection Scanner
     - 4: Port Scanner
-5. Follow the prompts and input any required information.
+
+5. **Follow the prompts and input any required information.**
 
 ### WordPress Enumeration
 - Enter the website URL (with https://).
