@@ -1,14 +1,18 @@
 path////
 
-/home/jordan/Octapars1/Octapars_tool/filename
+/home/jordan/Octapars1/Octapars_tool/xsspayloads.txt
+
+/home/jordan/Octapars1/Octapars_tool/SqlPayloads.txt
 
 
 website for option 4:-
 https://numetry.in
 
 url///
-xss=== 
 
-keep it as it is
+
+xss === keep it as it is
 
 http://testphp.vulnweb.com/listproducts.php?cat={xss}
+
+sql === 
